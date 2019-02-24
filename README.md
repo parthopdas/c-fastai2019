@@ -14,6 +14,7 @@
 
 ### Run periodically
 
+- conda activate p2d-fastai2019
 - conda env update
 - conda update --all
 
