@@ -1,0 +1,18 @@
+{
+  "default": {
+    "entry": "vertical",
+    "layout": [
+      [ 
+        "cls"
+        , "cls"
+      ]
+
+      , [
+        "cls; d:/src/c/c-fastai2019/tools/monitor-gpu.ps1"
+        , "cls; d:/src/c/c-fastai2019/tools/monitor-cpu.ps1"
+        , "wsl.exe"
+      ]
+    ]
+  }
+}
+
