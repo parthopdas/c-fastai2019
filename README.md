@@ -27,8 +27,8 @@
 #### Anaconda (default)
 
 - conda install -c pytorch -c fastai -c conda-forge fastai pytorch torchvision cuda100
-- conda install jupyter
 - tools\verify-CUDA.ps1
+- conda install jupyter
 
 #### PIP (alternative)
 
@@ -49,6 +49,13 @@
 - ./tools/run-after-git-clone
 - pip install -e ".[dev]"
 
+##### Debugging fastai libraries
+
+- Start VS2017 from conda environment
+- Create new Python project
+- Add fastai code to the python file
+- Set breakpoint and F5, F10, F11
+
 ## Tools
 
 - [hyperlayout](https://github.com/timolins/hyperlayout) default
@@ -59,6 +66,7 @@
 ## Tips & tricks 
 
 - Faster experimentation
+  - Transfer learning
   - [TODO] Google image downloader
   - Use the fastai samples/tiny datasets
   - Train with images with reduced sizes
@@ -71,8 +79,21 @@
     ```
 - Fixing GPU OOM
   - Reduce batch size
-  - Reduce image size   
+  - Reduce image size
+  - Use a simpler architecture   
   - Mixed precision training (doing the training using half precision fp)
+- Ways to get more data
+  - Supervised learning: Manually label data
+  - Data augmentation
+  - NLP: Entire test and train sets to fine tune language model
+- Ways to prevent underfit?
+  - Decrease regularization
+  - 
+- Ways to prevent overfit??
+  - Increase regularization
+  - 
+- Ways to speed up training?
+  - Use transfer learning
 
 ## Jeremy's thumb rules
 
@@ -88,6 +109,13 @@
 - [Course material](https://course-v3.fast.ai)
 - [Course transcripts](https://github.com/hiromis/notes)
 - [Course notes](https://forums.fast.ai/t/deep-learning-lesson-1-notes/27748)
+
+## Insights
+
+- Skill in training models is honing the intuition of driving across the loss function landscape to find the lowest & flattest spot as quickly as possible.
+  - Lowest => Best fit across seen data sets
+  - Flattest => Generalizes the best across unseen data sets
+- With DL there is still feature engineering, but the features are encoded in the activations in various layers and automagically figured out by the network during training
 
 ## TODO
 
